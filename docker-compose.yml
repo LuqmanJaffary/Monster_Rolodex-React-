@@ -1,0 +1,11 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"  # Map Nginx port 80 to host port 80
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - .:/app
